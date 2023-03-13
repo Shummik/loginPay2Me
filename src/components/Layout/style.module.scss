@@ -1,0 +1,36 @@
+@import "../../assets/styles/helper/variables";
+@import "../../assets/styles/helper/mixins";
+
+.layout {
+  display: flex;
+  width: 100%;
+
+  &Content {
+    width: 100%;
+    max-width: rem(824);
+    padding: max(4%, rem(48)) max(1.2%, rem(8)) 0;
+    margin-right: rem(16);
+    margin-left: auto;
+    @media (max-width: $tableWidth) {
+      margin-right: 0;
+    }
+  }
+  &Img {
+    background: #f8f8fe;
+    min-height: 100vh;
+    max-width: calc(764 * 100% / 1920);
+    width: 100%;
+    overflow-x: hidden;
+    padding-left: rem(40);
+    img {
+      height: calc(679 * 100% / 1080);
+      width: 100%;
+      object-fit: contain;
+      object-position: 100%;
+      margin-top: 33%;
+    }
+    @media (max-width: $tableWidth) {
+      display: none;
+    }
+  }
+}

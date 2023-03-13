@@ -1,0 +1,46 @@
+@import "../../assets/styles/helper/variables";
+@import "../../assets/styles/helper/mixins";
+
+.helper {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  margin-left: auto;
+  width: fit-content;
+  cursor: pointer;
+  @media (max-width: $tableWidth) {
+    padding-right: rem(20);
+    margin-bottom: rem(20);
+  }
+  &:hover {
+    .helperImage {
+      box-shadow: 0 0 10px 0 #8a50e6;
+    }
+  }
+  &Image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: rem(62.36);
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    background: linear-gradient(180deg, #744ced 18.75%, #b650e6 88.02%);
+    box-shadow: 0px 14px 30.5455px -16.5455px #8a50e6;
+    margin-left: rem(20);
+    transition: all 0.4s ease;
+    @media (max-width: $tableWidth) {
+      width: rem(45);
+    }
+    img {
+      width: calc(26.67 * 100% / 62.36);
+      aspect-ratio: 1/1;
+      
+    }
+  }
+  span {
+    white-space: nowrap;
+    font-size: rem(14);
+    line-height: rem(19);
+    color: $mainFontColorPuprple;
+  }
+}

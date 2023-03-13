@@ -1,0 +1,40 @@
+@import "../../assets/styles/helper/variables";
+@import "../../assets/styles/helper/mixins";
+
+.footer {
+  padding: rem(4) rem(8) rem(30);
+}
+
+.mark {
+  font-weight: 300;
+  font-size: rem(16);
+  line-height: 130%;
+  color: #4a3c73;
+  margin-bottom: rem(8);
+}
+.address {
+  font-weight: 300;
+  font-size: rem(10);
+  line-height: 130%;
+  color: #a197bd;
+  margin-bottom: rem(8);
+  p {
+    margin-bottom: rem(2);
+    @media (max-width: $tableWidth) {
+      margin-bottom: rem(5);
+    }
+  }
+}
+
+.policy {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  a {
+    font-size: rem(14);
+    line-height: rem(19);
+    color: #744ced;
+    padding: rem(4) 0;
+    margin-right: rem(58);
+  }
+}

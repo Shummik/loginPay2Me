@@ -1,0 +1,63 @@
+@import "../../assets/styles/helper/variables";
+@import "../../assets/styles/helper/mixins";
+
+.lang {
+  &Select {
+    position: relative;
+    button {
+      display: flex;
+      align-items: center;
+      text-transform: capitalize;
+      padding: rem(7);
+      font-size: rem(14);
+      line-height: rem(19);
+      color: #4a3c73;
+      cursor: pointer;
+    }
+    img {
+      border: 1px solid #f1ecff;
+      border-radius: rem(6);
+      margin-right: rem(6);
+    }
+  }
+  &List {
+    position: absolute;
+    bottom: 100%;
+    left: rem(7);
+    box-shadow: -6px 6px 16px 4px rgba(44, 19, 97, 0.08);
+    border-radius: rem(8);
+    z-index: 2;
+    @media (max-width: $tableWidth) {
+      left: unset;
+      right: rem(7);
+    }
+    button {
+      padding: rem(8) rem(12);
+      min-width: rem(197);
+      width: 100%;
+      background: #FFFFFF;
+      &:first-child {
+        border-radius: rem(8) rem(8) 0 0;
+      }
+      &:last-child {
+        border-radius: 0 0 rem(8) rem(8);
+      }
+      &.active {
+        background: #f2ecff;
+      }
+    }
+    span {
+      font-weight: 300;
+      font-size: rem(14);
+      color: #1f1d1c;
+      &.listId {
+        text-transform: uppercase;
+        font-size: rem(14);
+        line-height: rem(19);
+        margin-right: rem(18);
+
+        color: #4a3c73;
+      }
+    }
+  }
+}
